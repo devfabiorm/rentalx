@@ -63,6 +63,14 @@
     ],
     "prettier/prettier": "error"
   },
+  "overrides": [
+    {
+      "files": [ "**/*Repository.ts"],
+      "rules": {
+        "no-use-before-define": "off"
+      }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "typescript": {}
