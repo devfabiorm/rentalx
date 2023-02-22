@@ -20,7 +20,6 @@ class SpecificationsRepository implements ISpecificationsRepository {
     Object.assign(specification, {
       name,
       description,
-      created_at: new Date(),
     });
 
     const createdSpecification = this.repository.create(specification);
