@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "RentalX",
+    "title": "RentX",
     "description": "This is an API Rest",
     "version": "1.0.0",
     "contact": {
@@ -80,9 +80,15 @@
         "description": "Reads a CSV file and upload its content",
         "requestBody": {
           "content": {
-            "application/octet-stream": {
+            "multipart/form-data": {
               "schema": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
               }
             }
           }
